@@ -1,0 +1,7 @@
+requirementsstreamlit==1.32.2
+langchain==0.1.17
+langchain-community==0.0.36
+langchain-groq==0.1.4
+faiss-cpu==1.7.4
+sentence-transformers==2.2.2
+python-dotenv==1.0.1
