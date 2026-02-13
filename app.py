@@ -14,7 +14,6 @@ from langchain.chains import ConversationalRetrievalChain
 # Load environment variables
 load_dotenv()
 
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 st.title("🤖Hi I am ClimaMind a Context-Aware Chatbot (Groq + RAG)")
 st.write("Ask questions regarding Global Warming. Powered by Groq and LangChain.")   
@@ -49,9 +48,9 @@ memory = ConversationBufferMemory(
     return_messages=True
 )
 
-# 6️⃣ Initialize Groq LLM
+
 llm = ChatGroq(
-    groq_api_key=GROQ_API_KEY,
+    groq_api_key=os.environ["GROQ_API_KEY"],
     model_name="openai/gpt-oss-120b",  # fast + free tier
     temperature=0.3
 )
